@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    /* The Vibrant Violet Sky Background */
+    background: linear-gradient(135deg, #1a0b2e 0%, #4b1263 50%, #94228d 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* THE CALCULATOR SHELL */
+.claculator {
+    background: rgba(25, 10, 35, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    width: 340px;
+}
+
+/* THE SCREEN */
+.display {
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    min-height: 80px;
+    word-wrap: break-word;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* GRID FIX */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.start, .operations, .numbers {
+    display: contents;
+}
+
+/* 🌌 BASE BUTTONS (Numbers 0-9) 🌌 */
+button {
+    background: linear-gradient(135deg, #6b21a8, #9333ea);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(147, 51, 234, 0.5);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 10px rgba(147, 51, 234, 0.3);
+}
+
+/* UTILITY KEYS (The .start div) - Deeper twilight violet */
+.start button {
+    background: linear-gradient(135deg, #3b0764, #581c87);
+    box-shadow: 0 4px 15px rgba(88, 28, 135, 0.3);
+}
+
+/* OPERATIONS (+, -, *, /, ^, %) - Bright sunset magenta */
+.operations button {
+    background: linear-gradient(135deg, #be185d, #e11d48);
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+}
+
+/* --- HERO BUTTONS OVERRIDES --- */
+
+/* AC Button - The Brightest Orange/Pink Sunset Pop */
+button[id="ac"] {
+    background: linear-gradient(135deg, #f43f5e, #fb923c) !important;
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.4) !important;
+}
+
+/* Equals Button - Neon Emerald Green to scream "GO!" */
+button[id="="] {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4) !important;
+}
